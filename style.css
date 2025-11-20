@@ -10,7 +10,7 @@ body {
     font-family: "Parkinsans", sans-serif;
 }
 
-/* Alles header */
+/* Alles header-----------------------------------*/
 header{
     display: flex;
     justify-content: space-between;
@@ -63,12 +63,22 @@ header img{
     max-height: 100px;
     padding: 20px;
 }
-/* -----header----- */
+/* ----------------------------------------- */
+/* main-------------------------------------- */
 main{
     background-color: #F6F5F5;
     border-top: 5px #E0B000 solid;
     position: relative;
     margin-top: 3em;
+
+    h1{
+        text-align: center;
+        font-size: var(--font-size-h3);
+
+        @media (min-width: 768px){
+            font-size: var(--font-size-h1);
+        }
+    }
 }
 .background-grid{
     display: flex;
@@ -116,15 +126,6 @@ main{
     
 }
 /* ----------------------------------------- */
-
-.dropdown{
-    display: none;
-
-    @media (min-width: 1024px) {
-        display:block;
-        text-align: center;
-    }
-}
 
 .tie{
     position: absolute;
@@ -191,21 +192,10 @@ main{
     grid-template-rows: repeat(1fr);
 }
 
-.quote{
-    display: none;
-
-    @media (min-width: 1024px) {
-        align-content: space-around;
-    }
-}
-
 .uncle{
     color: #E0B000;
 }
 
-h3{
-    font-weight: normal;
-}
 
 /* product -------------------------------------- */
 .product-grid{

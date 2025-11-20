@@ -66,14 +66,19 @@ header img{
 /* ----------------------------------------- */
 /* main-------------------------------------- */
 main{
-    background-color: var(--primary-background-color);
-    border-top: 5px solid var(--primary-color);
+    background-color: var(--secondary-background-color);
     position: relative;
     margin-top: 3em;
+
+    @media(min-width:1024px){
+        margin-top: 1em;
+        
+    }
 
     h1{
         text-align: center;
         font-size: var(--font-size-h3);
+        background-color: var(--primary-background-color);
 
         @media (min-width: 768px){
             font-size: var(--font-size-h1);
@@ -82,7 +87,7 @@ main{
 }
 .background-grid{
     display: flex;
-    background-color: var(--primary-background-color);
+    background-color: var(--secondary-background-color);
 }
 
 /* ai button -------------------------------*/
@@ -94,10 +99,7 @@ main{
     width:8em;
     aspect-ratio:1;
     border-radius:50%;
-    /* background-color: red; */
 
-    /* border:solid .225em #E0B000; */
-    /* border:solid .225em transparent; */
     appearance: none;
     border:none;
 
@@ -123,19 +125,98 @@ main{
     cursor:pointer;
     font-weight: bold;
 
-    
+    @media(min-width: 1024px){
+        display: none;
+    }
+
 }
+
+/* .secondary-search-bg{
+    display: none;
+
+    @media(min-width:1024px){
+
+    display: flex;
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    z-index: 10;
+    align-items: center;
+    background-color: var(--secondary-background-color);
+    padding: 0px;
+    border-radius: 7px;
+    width: 100px;
+
+    .ai-button-secondary {
+        position: absolute;
+        right: .5em;
+        background: none;
+        border: none;
+        height: 55px;
+        width: 55px;
+        cursor: pointer;
+    }
+
+    .ai-button-secondary svg {
+        display: block;
+    }
+
+    .secondary-search {
+        width: 50%;
+        height: 3em;
+    }
+
+    .secondary-search-input {
+        width: 100%;
+        padding: 0.8em 3.5em 0.8em 3.2em;
+        background-color: var(--secondary-background-color);
+        color: var(--secondary-color);
+        border: 2px solid var(--secondary-color);
+        border-radius: 20px;
+        outline: none;
+        font-size: 1em;
+    }
+
+    .secondary-search-input::placeholder {
+        color: #bfbfbf;
+    }
+
+    .ai-button-primary {
+        position: absolute;
+        left: .5em;
+        background: none;
+        border: none;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    }
+} */
+
+.secondary-search-bg{
+    display: none;
+    background-color: var(--primary-background-color);
+
+    @media(min-width:1024px){
+        display: inherit;
+    }
+}
+
+
 /* ----------------------------------------- */
 
 .tie{
     position: absolute;
-    top: -53px;
+    top: -49px;
     left: 50%;
     transform: translateX(-50%);
 
     @media (min-width: 768px) {
         position: absolute;
-        top: -78px;
+        top: -72px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -171,10 +252,12 @@ main{
 }
 
 /* ---------------------------------------------------------------------------------- */
+
 .top-grid{
     display: flex;
     justify-content: space-between;
     margin-bottom: -20px;
+    align-items: center;
 }
 
 .users{
@@ -183,13 +266,18 @@ main{
     @media (min-width: 768px) {
         display: block;
         margin-right: 50px;
-        height: 50px;
+        height: 75px;
     }
 }
 
 .background-grid{
     display: grid;
+    background-color: var(--primary-background-color);
     grid-template-rows: repeat(1fr);
+    justify-content: center;
+    border-top: 5px solid var(--primary-color);
+
+
 }
 
 .uncle{
@@ -204,10 +292,10 @@ main{
     gap: 10px;
     margin-inline: 10px;
     justify-items: center;
+    background-color: var(--primary-background-color);
 
     @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
     }
 
     @media (min-width: 1024px) {
@@ -308,6 +396,9 @@ main{
         display: flex;
         justify-content:space-between;
         align-items: center;
+        width: 95%;
+        bottom: 5px;
+        position: absolute;
 
         svg{
             max-height: 40px;

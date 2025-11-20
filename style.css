@@ -417,6 +417,7 @@ footer svg{
 
 footer a{
     color: var(--secondary-background-color);
+    text-decoration: none;
 }
 
 footer input{

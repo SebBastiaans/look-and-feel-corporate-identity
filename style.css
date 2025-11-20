@@ -324,18 +324,103 @@ main{
 /* Alles van de footer */
 footer{
     background-color: var(--secondary-color);
-}
 
-.footer-gifts{
-    background: var(--primary-color);
-    color: var(--secondary-background-color);
-    display: block;
-    padding: 2px;
+    form{
+        background-color: var(--primary-color);
+        color: var(--secondary-background-color);
+        justify-content: center;   
+        text-align: center; 
 
+        p:first-of-type{
+            font-weight: 600;
+            margin-top: 10px;
+        }
 
-    @media (min-width: 1024) {
-        display: flex;
+        p{
+            margin: auto;
+        }
+
+        @media(min-width:768px){
+            padding-left: 5em;
+            padding-right: 5em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+    
     }
+    .primary-color-bg {
+        display: flex;
+        align-items: center;
+        background-color: var(--primary-color);
+        padding: 0.4em;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .primary-bg-search {
+        background-color: var(--primary-background-color);
+        color: var(--secondary-color);
+        border: none;
+        width: 100%;
+    }
+    .primary-text {
+        height: 45px;
+        width: 100%;
+    }
+    .primary-color-bg:focus-visible {
+        outline: var(--primary-color) 3px solid;
+    }
+
+    .send-button {
+        position: absolute;
+        right: 0.8em;
+        background-color: var(--secondary-color);
+        border: none;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        fill: #fff;
+        cursor: pointer;
+    }
+
+    .send-button svg {
+        fill: var(--secondary-background-color);
+    }
+
+    .send-button:hover {
+        background-color: var(--primary-background-color);
+        fill: var(--secondary-color);
+    }
+    .send-button:focus-visible {
+        outline: var(--primary-color) 3px solid;
+    }
+    .button {
+        border-radius: 50%;
+        aspect-ratio: 1;
+        border: none;
+        fill: var(--secondary-background-color);
+        background-color: var(--secondary-color);
+
+        @media (prefers-reduced-motion: no-preference) {
+        transition: 0.2s ease-out;
+        }
+
+        &:hover {
+        background-color: var(--primary-background-color);
+        fill: var(--secondary-color);
+        }
+
+        &:active {
+        background-color: var(--primary-color);
+        fill: var(--secondary-color);
+        }
+    }
+
 }
 
 .footer-middle {
@@ -420,15 +505,6 @@ footer a{
     text-decoration: none;
 }
 
-footer input{
-    border: 1px solid var(--secondary-color);
-    border-radius: 24px;
-    text-align: center;
-}
-
-.footer-links{
-    color: var(--secondary-background-color);
-}
 
 .footer-bottom, .footer-bottom a{
     display: flex;
@@ -436,13 +512,9 @@ footer input{
     justify-content: space-evenly;
 }
 
-.footer-bottom p{
-    margin-bottom: 10px;
-}
-
 .contact-us li{
     display: flex;
     align-items: center;
     gap: 10px;
     margin-block-start: -1em;
-}
+} 

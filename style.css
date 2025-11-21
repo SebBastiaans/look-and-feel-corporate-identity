@@ -15,52 +15,52 @@ header{
     display: flex;
     justify-content: space-between;
     margin-bottom: -20px;
-}
+    align-items: center;
 
-header img{
-    max-width: 100%;
-    height: 80px;
-}
-.logo{
-    display: none;
+    .logo{
+        display: none;
 
-    @media (min-width: 768px) {
-        display: block;
-        max-width: 200px;
+        @media (min-width: 768px) {
+            display: block;
+            padding: 20px;
+            margin-bottom: -20px;
+        }
+    }
+
+    .logo-small{
+        display: flex;
         padding: 20px;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
-}
 
-.logo-small{
-    display: flex;
-    margin-left: 10px;
-    margin-top: 10px;
-
-    @media (min-width: 768px) {
+    .create-your-list{
         display: none;
+
+        @media (min-width: 1024px) {
+            display: block;
+        }
     }
-}
 
-.create-your-list{
-    display: none;
+    .create-your-list-small{
+        display: flex;
 
-    @media (min-width: 1024px) {
-        display: block;
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
-}
 
-.create-your-list-small{
-    display: flex;
-
-    @media (min-width: 768px) {
-        display: none;
+    .profile{
+        display: flex;
     }
-}
 
-.icons{
-    display: flex;
-    max-height: 100px;
-    padding: 20px;
+    .icons{
+        display: flex;
+        padding: 20px;
+        align-content: center;
+    }
 }
 /* ----------------------------------------- */
 /* main-------------------------------------- */
@@ -249,106 +249,6 @@ main{
 
 }
 
-.article-product{
-    position: relative;
-    background-color: var(--secondary-background-color);
-    width: 300px;
-    height: 400px;
-    padding: 4px 4px 0px 4px;
-    cursor: pointer;
-
-    &:hover {
-        translate: 0 -1px;
-    }
-
-    .article-product-img{
-        img{
-            width: 300px;
-            aspect-ratio: 1/0.9;
-            object-fit: cover;
-        }
-
-        .article-add-list{
-            position: absolute ;
-            top: 10px;
-            right: 10px;
-            background: transparent;
-            cursor: pointer;
-            height: 75px;
-            width: 75px;
-            border: none;
-            z-index: 1;
-            display: block;
-
-            border-radius:50%;
-
-            &:hover{
-                background-color: var(--primary-color);
-            }
-        }
-
-        .article-tags{
-            position: absolute;
-            bottom: 138px;
-            left: 10px;
-            flex-wrap: wrap;
-        }
-
-        .article-tag-timeless{
-            background: var(--timeless-label-color);
-            color: var(--secondary-background);
-            font-size: 12px;
-            padding: 3px 8px;
-        }
-
-        .article-tag-sustainable{
-            background: var(--sustainable-label-color);
-            color: var(--secondary-background);
-            font-size: 12px;
-            padding: 3px 8px;
-        }
-
-        .article-tag-experience{
-            background: var(--experience-label-color);
-            color: var(--secondary-background);
-            font-size: 12px;
-            padding: 3px 8px;
-        }
-
-        .article-tag-digital{
-            background: var(--digital-label-color);
-            color: var(--secondary-background);
-            font-size: 12px;
-            padding: 3px 8px;
-        } 
-    }
-
-    p{        
-        &:hover{
-            text-decoration-line: underline;
-        }
-    }
-    
-    .article-statistics{
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-        width: 95%;
-        bottom: 5px;
-        position: absolute;
-
-        svg{
-            max-height: 40px;
-            width:auto;
-        }
-
-        span:nth-of-type(1) {
-            margin-right:auto;
-        }
-
-    }
-}
-
 /* Alles van de footer */
 footer{
     background-color: var(--secondary-color);
@@ -360,7 +260,7 @@ footer{
         text-align: center; 
 
         p:first-of-type{
-            font-weight: 600;
+            font-weight: var(--font-weight-heading);
             margin-top: 10px;
         }
 
@@ -369,12 +269,11 @@ footer{
         }
 
         @media(min-width:768px){
-            padding-left: 5em;
-            padding-right: 5em;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
 
+            .footer-email-text{
+                text-align: start;
+            }
         }
     
     }

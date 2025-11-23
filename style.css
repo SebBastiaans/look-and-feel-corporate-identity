@@ -249,6 +249,16 @@ main{
 
 }
 
+.article-statistics{
+    position: absolute;
+    bottom: -.5rem;
+    width: 300px;
+
+    img{
+        height: 3rem;
+    }
+}
+
 /* Alles van de footer */
 footer{
     background-color: var(--secondary-color);

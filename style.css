@@ -418,8 +418,9 @@ footer{
     form{
         background-color: var(--primary-color);
         color: var(--secondary-background-color);
-        justify-content: center;   
+        justify-content: space-between;   
         text-align: center; 
+        padding: 0.3rem 5% .3rem 5%;
 
         p:first-of-type{
             font-weight: var(--font-weight-heading);
@@ -435,79 +436,26 @@ footer{
 
             .footer-email-text{
                 text-align: start;
+                
+            }
+
+            .footer-form-email{
+                width: 20rem;
+            }
+
+        }
+        @media(min-width:1024px){
+            .footer-form-email{
+                width: 30rem;
             }
         }
+        @media(min-width:1440px){
+            .footer-form-email{
+                width: 40rem;
+            }
+        }
+
     
-    }
-    .primary-color-bg {
-        display: flex;
-        align-items: center;
-        background-color: var(--primary-color);
-        padding: 0.4em;
-        border-radius: 5px;
-        position: relative;
-    }
-
-    .primary-bg-search {
-        background-color: var(--primary-background-color);
-        color: var(--secondary-color);
-        border: none;
-        width: 100%;
-    }
-    .primary-text {
-        height: 45px;
-        width: 100%;
-    }
-    .primary-color-bg:focus-visible {
-        outline: var(--primary-color) 3px solid;
-    }
-
-    .send-button {
-        position: absolute;
-        right: 0.8em;
-        background-color: var(--secondary-color);
-        border: none;
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        fill: #fff;
-        cursor: pointer;
-    }
-
-    .send-button svg {
-        fill: var(--secondary-background-color);
-    }
-
-    .send-button:hover {
-        background-color: var(--primary-background-color);
-        fill: var(--secondary-color);
-    }
-    .send-button:focus-visible {
-        outline: var(--primary-color) 3px solid;
-    }
-    .button {
-        border-radius: 50%;
-        aspect-ratio: 1;
-        border: none;
-        fill: var(--secondary-background-color);
-        background-color: var(--secondary-color);
-
-        @media (prefers-reduced-motion: no-preference) {
-        transition: 0.2s ease-out;
-        }
-
-        &:hover {
-        background-color: var(--primary-background-color);
-        fill: var(--secondary-color);
-        }
-
-        &:active {
-        background-color: var(--primary-color);
-        fill: var(--secondary-color);
-        }
     }
 
 }
@@ -585,7 +533,7 @@ footer li{
     margin-block-start: 0.5em;
 }
 
-footer svg{
+.logo-footer{
     margin-left: 8px;
 }
 

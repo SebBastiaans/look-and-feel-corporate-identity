@@ -1,0 +1,58 @@
+body{
+    background-color: var(--primary-background-color);
+}
+
+
+form{
+    background-color: var(--primary-background-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 4rem 0 3rem;
+
+    fieldset{
+        background-color: var(--secondary-background-color);
+        appearance: none;
+        border: none;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .form-about-company{
+        width: 394.2px;
+    }
+
+    .form-submit-gift{
+        width: 549px;
+    }
+
+    .input-label-text-large {
+        appearance: none;
+        border-radius: 6px;
+        border: 1px solid var(--secondary-text-color);
+        color: var(--secondary-text-color);
+        width: 549px;
+        height: 63px;
+        font-family: "parkinsans", sans-serif;
+        font-size: 1em;
+        padding-left: 1em;
+    }
+
+    .label-textarea-large {
+        appearance: none;
+        border-radius: 6px;
+        border: 1px solid var(--secondary-text-color);
+        color: var(--secondary-text-color);
+        width: 549px;
+        height: 199px;
+        font-family: "parkinsans", sans-serif;
+        font-size: 1em;
+        padding-left: 1em;
+    }
+
+    .form-picture-submit{
+        display: flex;
+        align-items: last baseline;
+        justify-content: space-between;
+        
+    }
+}

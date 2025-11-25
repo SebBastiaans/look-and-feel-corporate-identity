@@ -66,7 +66,7 @@ header{
 
     .icons{
         display: flex;
-        padding: 20px;
+        padding: 20px 20px 0 20px;
         align-content: center;
     }
 }
@@ -305,7 +305,13 @@ main{
 
 }
 
-  .article-product {
+.product-link-overlay{
+    position: absolute;
+    inset: 0;
+}
+
+
+  /* .article-product {
     position: relative;
     background-color: var(--secondary-background-color);
     width: 200px;
@@ -406,7 +412,7 @@ main{
         margin-right: auto;
       }
     }
-  }
+  } */
 
 
 /* Alles van de footer */

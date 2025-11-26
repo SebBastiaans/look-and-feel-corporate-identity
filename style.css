@@ -97,12 +97,11 @@ main{
     display: none;
 
     @media(min-width:1024px){
-        display: grid;
+        display: flex;
+        flex-direction: column;
         width: 21rem;
         flex-grow: 1;
-        height: 100vh;
-        /* place-items:center; */
-        grid-template-rows: auto;
+        margin-inline-start: 1rem;
 
         h1{
             width: 55%;
